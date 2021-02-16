@@ -1,69 +1,4 @@
-/*---------------------------
-    Font-Styles @font-face
------------------------------*/
-
-@font-face {
-    font-family: 'ComfortaaBold';
-    src: url('fonts/ComfortaaBold.eot');
-    src: url('fonts/ComfortaaBold.eot') format('embedded-opentype'),
-         url('fonts/ComfortaaBold.woff2') format('woff2'),
-         url('fonts/ComfortaaBold.woff') format('woff'),
-         url('fonts/ComfortaaBold.ttf') format('truetype'),
-         url('fonts/ComfortaaBold.svg#ComfortaaBold') format('svg');
-}
-
-@font-face {
-    font-family: 'ComfortaaSemiBold';
-    src: url('fonts/ComfortaaSemiBold.eot');
-    src: url('fonts/ComfortaaSemiBold.eot') format('embedded-opentype'),
-         url('fonts/ComfortaaSemiBold.woff2') format('woff2'),
-         url('fonts/ComfortaaSemiBold.woff') format('woff'),
-         url('fonts/ComfortaaSemiBold.ttf') format('truetype'),
-         url('fonts/ComfortaaSemiBold.svg#ComfortaaSemiBold') format('svg');
-}
-
-
-@font-face {
-    font-family: 'ComfortaaLight';
-    src: url('fonts/ComfortaaLight.eot');
-    src: url('fonts/ComfortaaLight.eot') format('embedded-opentype'),
-         url('fonts/ComfortaaLight.woff2') format('woff2'),
-         url('fonts/ComfortaaLight.woff') format('woff'),
-         url('fonts/ComfortaaLight.ttf') format('truetype'),
-         url('fonts/ComfortaaLight.svg#ComfortaaLight') format('svg');
-}
-
-@font-face {
-    font-family: 'MontserratBold';
-    src: url('fonts/MontserratBold.eot');
-    src: url('fonts/MontserratBold.eot') format('embedded-opentype'),
-         url('fonts/MontserratBold.woff2') format('woff2'),
-         url('fonts/MontserratBold.woff') format('woff'),
-         url('fonts/MontserratBold.ttf') format('truetype'),
-         url('fonts/MontserratBold.svg#MontserratBold') format('svg');
-}
-
-@font-face {
-    font-family: 'MontserratRegular';
-    src: url('fonts/MontserratRegular.eot');
-    src: url('fonts/MontserratRegular.eot') format('embedded-opentype'),
-         url('fonts/MontserratRegular.woff2') format('woff2'),
-         url('fonts/MontserratRegular.woff') format('woff'),
-         url('fonts/MontserratRegular.ttf') format('truetype'),
-         url('fonts/MontserratRegular.svg#MontserratRegular') format('svg');
-}
-
-@font-face {
-    font-family: 'MontserratLightItalic';
-    src: url('fonts/MontserratLightItalic.eot');
-    src: url('fonts/MontserratLightItalic.eot') format('embedded-opentype'),
-         url('fonts/MontserratLightItalic.woff2') format('woff2'),
-         url('fonts/MontserratLightItalic.woff') format('woff'),
-         url('fonts/MontserratLightItalic.ttf') format('truetype'),
-         url('fonts/MontserratLightItalic.svg#MontserratLightItalic') format('svg');
-}
-
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Open+Sans&display=swap');
 
 
 /*--------------------------
@@ -80,10 +15,13 @@ html {
 }
 
 html{
-	background: #ffffff;
+	background: #f2f2f2;
+	height: 100%;
+	width: 100%
+
 }
 
-body {
+html,body {
     margin: 0;
     padding: 0;
 }
@@ -94,7 +32,8 @@ main {
 }
 
 h1 {
-	font-family: "ComfortaaBold", helvetica, verdana, sans-serif;
+	font-family: "Comfortaa", helvetica, verdana, sans-serif;
+	font-weight: 600;
 	font-size: 3em;
 	color: #1eb667;
 	text-shadow: 0.01em 0.01em 0.01em #000;
@@ -102,21 +41,22 @@ h1 {
 
 
 h2 {
-	font-family: "ComfortaaLight", helvetica, verdana, sans-serif;
+	font-family: "Comfortaa", helvetica, verdana, sans-serif;
+	font-weight: 300;
 	font-size: 1.5em;
 	text-decoration: underline
 }
 
 h3 a{
 	color: #000;
-	font-family: "ComfortaaBold", helvetica, verdana, sans-serif;
+	font-family: "Comfortaa", helvetica, verdana, sans-serif;
+	font-weight: 600;
 	font-size: 0.9em;
 }
 
 
 p {
-	font-family: "MontserratRegular", trebuchet, courier, sans-serif;
-	font-size: 18px;
+	font-family: "Open Sans", trebuchet, courier, sans-serif;
 	line-height: 1.6;
 }
 
