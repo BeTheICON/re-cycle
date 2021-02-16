@@ -1,29 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Open+Sans&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Open+Sans&display=swap");
 
 /*--------------------------
     Global Styles
 --------------------------*/
 
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
 }
 
-html{
+html {
 	background: #f2f2f2;
 	height: 100%;
-	width: 100%
-
+	width: 100%;
 }
 
-html,body {
-    margin: 0;
-    padding: 0;
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: "Open Sans", trebuchet, courier, sans-serif;
 }
 
 main {
@@ -39,35 +50,33 @@ h1 {
 	text-shadow: 0.01em 0.01em 0.01em #000;
 }
 
-
 h2 {
 	font-family: "Comfortaa", helvetica, verdana, sans-serif;
 	font-weight: 300;
 	font-size: 1.5em;
-	text-decoration: underline
+	text-decoration: underline;
 }
 
-h3 a{
-	color: #000;
-	font-family: "Comfortaa", helvetica, verdana, sans-serif;
-	font-weight: 600;
-	font-size: 0.9em;
+h3 a {
+	color: #fff;
 }
-
 
 p {
-	font-family: "Open Sans", trebuchet, courier, sans-serif;
 	line-height: 1.6;
 }
 
-a {
-    color: #000;
+img {
+	max-width: 100%;
+	display: block;
 }
-		
+
+a {
+	color: #000;
+}
+
 a:hover {
 	color: #000;
 	text-shadow: 1px 1px 0.5 #000;
-	border: 2px solid #1eb667;
 	padding: 0.5em;
 }
 
@@ -76,41 +85,28 @@ a:active {
 	border: 2px solid #79f277;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/*---------------------------
-    Global Class-Styles
----------------------------*/
-
-.clearfix:before,
-.clearfix:after {
-    content:"";
-    display:table;
-}
-.clearfix:after {
-    clear:both;
-}
-
-
-
 /*------------------------------
     Header Styles
 ------------------------------*/
 
 /*Header*/
 
-header{
+header {
+	width: 100%;
 	background-color: #ff7800;
-	min-height: 4em;
+	background-image: linear-gradient(90deg, #ff7800 40%, #efaa48 100%);
 	margin: 0;
 	padding: 0;
 }
 
+.logo-container img {
+	width: 100%;
+	padding: 1.5rem;
+	min-width: 200px;
+	max-width: 300px;
+}
+
 i.fab {
-	font-size: 48px;
 	color: #ffffff;
 	padding: 0.1em 0.1em 0 0.1em;
 }
@@ -125,25 +121,31 @@ i.fab {
 .headerCol3 {
 	min-width: 30%;
 	padding: 1.2em 0.5em 0 2em;
-	font-family: "ComfortaaBold", helvetica, verdana, sans-serif;
-	font-size: 1.2em;
 }
 
 .headerFlexContainer {
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: space-evenly; 
+	justify-content: space-evenly;
+}
+
+/* Header Navigational Styles */
+#hamburgerMenu {
+	position: relative;
+}
+#hamburgerMenu:checked ~ nav.topMenu {
+	position: absolute;
+	float: right;
+	display: block;
+	background-color: #ff7800;
+	width: 200px;
 }
 
 
-
-/* Header Navigational Styles */
-
-
-
-i.fas {
-	font-size: 48px;
-	color: #000000;
+.footerFlexContainer {
+	text-align: center;
+	padding: 2em 1.5em 5em 1.5em;
+}
 }
 
 #contactMenu {
@@ -156,13 +158,9 @@ i.fas {
 	background-color: #ff7800;
 	width: 8em;
 }
-	
+
 nav.navContactUs {
 	display: none;
-} 
-
-nav {
-	font-family: "ComfortaaSemiBold", helvetica, verdana, sans-serif;
 }
 
 .navContactUs ul li {
@@ -172,32 +170,20 @@ nav {
 
 #navSearchLabel {
 	margin-left: -1.5em;
-	font-size: 18px;
 }
 #navSearchLabel:hover {
 	color: #fff;
 }
-#navSearch {
-	font-family: font-family: "MontserratRegular", trebuchet, courier, sans-serif;
-	font-size: 1.5em;
-	max-width: 8em;
-	margin-left: -1em;
-	padding-top: 0.5em;
-}
 
 .topMenu ul li {
 	list-style: none;
-	width: 10em;
 	line-height: 2em;
 	padding-top: 0.4em;
 }
 
-
 nav ul li a {
 	color: #000000;
 	line-height: 2em;
-	font-size: 18px;
-	margin-left: -1.5em;
 	text-decoration: none;
 }
 
@@ -208,7 +194,6 @@ nav ul li a:hover {
 nav ul li a:active {
 	color: #1eb667;
 }
-
 
 /*------------------------------
     Main Styles
@@ -231,15 +216,7 @@ nav ul li a:active {
 	border: 2px solid #1eb667;
 }
 
-.topPresentation .topLogoSmall {
-	padding-top: 2em;
-	text-align: center;
-	min-width: 300px;
-	min-height: 200px;	
-}
-
 .topTextPresentation {
-	font-size: 0.5em;
 	width: 60%;
 	text-align: left;
 }
@@ -249,10 +226,11 @@ nav ul li a:active {
 	margin: 0 auto;
 	padding-top: 10em;
 	padding-bottom: 30em;
-	background-color: rgba(255,255,255,0.8);
+	background-color: rgba(255, 255, 255, 0.8);
 }
 .aboutUs {
-	background: url(images/bsckground-image_re-cycle_about-us_planet-tree.png) center no-repeat; 
+	background: url(images/bsckground-image_re-cycle_about-us_planet-tree.png)
+		center no-repeat;
 	background-size: cover;
 	max-width: 100%;
 	min-height: 800px;
@@ -260,7 +238,8 @@ nav ul li a:active {
 }
 
 .contactUs {
-	background: url(images/background-img_re-cycle_logo_contact-us.png) center no-repeat; 
+	background: url(images/background-img_re-cycle_logo_contact-us.png) center
+		no-repeat;
 	background-size: cover;
 	max-width: 100%;
 	min-height: 800px;
@@ -272,7 +251,7 @@ nav ul li a:active {
 	margin: 0 auto;
 	padding-top: 10em;
 	padding-bottom: 30em;
-	background-color: rgba(255,255,255,0.9);
+	background-color: rgba(255, 255, 255, 0.9);
 }
 
 .iframeContainer {
@@ -285,14 +264,15 @@ nav ul li a:active {
 .tourMap {
 	position: absolute;
 	top: 0;
-	left:0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	border: 1px solid #000;
 }
 
 .mainSectionHome {
-	background: linear-gradient(rgba(255,255,255,0.8),rgba(0,0,0, 0)),url(images/re-cycle_home-page-hero-img.jpg);
+	background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)),
+		url(images/re-cycle_home-page-hero-img.jpg);
 	background-position: center;
 	background-size: cover;
 	height: 600px;
@@ -301,8 +281,6 @@ nav ul li a:active {
 .mainSectionHome .viewToursDropDown {
 	margin: 0 auto;
 	text-align: center;
-	font-family: "MontserratRegular", trebuchet, courier, sans-serif;
-	font-size: 1em;
 	padding-top: 4em;
 }
 
@@ -315,10 +293,9 @@ nav ul li a:active {
 	display: none;
 }
 
-
 #tours:checked ~ nav.viewTours {
 	display: block;
-	background-color: rgba(255,255,255, 1);
+	background-color: rgba(255, 255, 255, 1);
 	min-height: 500px;
 	padding-top: 1em;
 }
@@ -327,7 +304,7 @@ nav ul li a:active {
 	background: #fff;
 	max-width: 360px;
 	margin: 1em auto 0;
-	padding-bottom: .5em;
+	padding-bottom: 0.5em;
 	border: 2px solid #1eb667;
 }
 
@@ -341,7 +318,7 @@ nav ul li a:active {
 
 nav.viewTours {
 	display: none;
-} 
+}
 
 nav.viewTours ul li {
 	list-style: none;
@@ -350,15 +327,12 @@ nav.viewTours ul li {
 
 .viewTours ul {
 	width: 100%;
-	padding-bottom: 2em
+	padding-bottom: 2em;
 }
 
 .viewTours ul li {
-	font-family: "MontserratRegular", trebuchet, courier, sans-serif;
-	font-size: 1em;
 	padding-bottom: 1em;
 }
-
 
 .viewTours li {
 	float: center;
@@ -367,12 +341,10 @@ nav.viewTours ul li {
 .viewTours ul li a:hover {
 	color: #000;
 	border: 1px solid #000;
-	background: rgba(121,242,119,0.8);
+	background: rgba(121, 242, 119, 0.8);
 }
 
 #viewToursMap {
-	font-family: "MontserratRegular", trebuchet, courier, sans-serif;
-	font-size: 1em;
 	padding: 1em 0;
 	max-width: 360px;
 	margin: 0 auto;
@@ -385,21 +357,18 @@ nav.viewTours ul li {
 #viewToursMap a:hover {
 	color: #000;
 	border: 1px solid #000;
-	background:rgba(121,242,119,0.8);
+	background: rgba(121, 242, 119, 0.8);
 }
 #viewToursMap a:active {
 	color: #27f778;
 	background: none;
 }
 
-
 #bookATour {
-	font-family: "MontserratRegular", trebuchet, courier, sans-serif;
-	font-size: 1.5em;
 	padding: 2em 0;
 	max-width: 360px;
 	margin: 0 auto;
-	background: rgba(121,242,119,0.8);
+	background: rgba(121, 242, 119, 0.8);
 	border: 2px solid #000000;
 	text-align: center;
 	margin-top: 2em;
@@ -414,22 +383,18 @@ nav.viewTours ul li {
 	border: none;
 }
 
-
 .headerOurTours {
-	font-family: "ComfortaaBold", helvetica, verdana, sans-serif;
-	font-size: 1.5em;
 	color: #1eb667;
 	text-shadow: 0.01em 0.01em 0.01em #000;
 }
 
 #contentWrapOurToursHeader {
 	max-width: 100%;
-	border-top: 0.5em solid 	 #ff7800;
-	border-bottom: 0.5em solid 	 #ff7800;
+	border-top: 0.5em solid #ff7800;
+	border-bottom: 0.5em solid #ff7800;
 	margin: 30em 0 6em 0;
 	text-align: center;
 }
-
 
 .ourToursImageGrid {
 	max-width: 90%;
@@ -438,7 +403,8 @@ nav.viewTours ul li {
 }
 
 #anotherDaySunriseTour {
-	background: linear-gradient(to top,rgba(255,255,255, 1),rgba(0,0,0, 0)), url(images/The-Always-Another-Day-Sunrise-Tour_sm.jpg);
+	background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0)),
+		url(images/The-Always-Another-Day-Sunrise-Tour_sm.jpg);
 	background-position: left;
 	background-size: cover;
 	width: 100%;
@@ -449,7 +415,8 @@ nav.viewTours ul li {
 }
 
 #beautifulSunsetTour {
-	background: linear-gradient(to top,rgba(255,255,255, 1),rgba(0,0,0, 0)), url(images/The-Always-Beautiful-Sunset-Tour_sm.jpg);
+	background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0)),
+		url(images/The-Always-Beautiful-Sunset-Tour_sm.jpg);
 	background-position: left;
 	background-size: cover;
 	width: 100%;
@@ -460,7 +427,8 @@ nav.viewTours ul li {
 }
 
 #downTownTour {
-	background: linear-gradient(to top,rgba(255,255,255, 1),rgba(0,0,0, 0)), url(images/The-Always-Going-Down-Town-Tour_sm.jpg);
+	background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0)),
+		url(images/The-Always-Going-Down-Town-Tour_sm.jpg);
 	background-position: left;
 	background-size: cover;
 	width: 100%;
@@ -470,7 +438,8 @@ nav.viewTours ul li {
 	border: 0.05em solid #000;
 }
 #oldCityTour {
-	background: linear-gradient(to top,rgba(255,255,255, 1),rgba(0,0,0, 0)), url(images/The-Always-Old-City-Tour_sm.jpg);
+	background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0)),
+		url(images/The-Always-Old-City-Tour_sm.jpg);
 	background-position: left;
 	background-size: cover;
 	width: 100%;
@@ -480,7 +449,8 @@ nav.viewTours ul li {
 	border: 0.05em solid #000;
 }
 #romanticAttractionsTour {
-	background: linear-gradient(to top,rgba(255,255,255, 1),rgba(0,0,0, 0)), url(images/The-Always-Romantic-Must-See-Attractions-Tour_sm.jpg);
+	background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0)),
+		url(images/The-Always-Romantic-Must-See-Attractions-Tour_sm.jpg);
 	background-position: left;
 	background-size: cover;
 	width: 100%;
@@ -490,7 +460,8 @@ nav.viewTours ul li {
 	border: 0.05em solid #000;
 }
 #scenicMountainTour {
-	background: linear-gradient(to top,rgba(255,255,255, 1),rgba(0,0,0, 0)), url(images/The-Always-Scenic-Mountain-Tour_sm.jpg);
+	background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0)),
+		url(images/The-Always-Scenic-Mountain-Tour_sm.jpg);
 	background-position: left;
 	background-size: cover;
 	width: 100%;
@@ -501,7 +472,8 @@ nav.viewTours ul li {
 }
 
 #roadLessTraveledTour {
-	background: linear-gradient(to top,rgba(255,255,255, 1),rgba(0,0,0, 0)), url(images/The-Always-Take-The-Road-Less-Traveled-Tour_sm.jpg);
+	background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0)),
+		url(images/The-Always-Take-The-Road-Less-Traveled-Tour_sm.jpg);
 	background-position: left;
 	background-size: cover;
 	width: 100%;
@@ -511,7 +483,8 @@ nav.viewTours ul li {
 	border: 0.05em solid #000;
 }
 #selfieTour {
-	background: linear-gradient(to top,rgba(255,255,255, 1),rgba(0,0,0, 0)), url(images/The-Always-Beautiful-Sunset-Tour_sm.jpg);
+	background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0)),
+		url(images/The-Always-Beautiful-Sunset-Tour_sm.jpg);
 	background-position: left;
 	background-size: cover;
 	width: 100%;
@@ -521,7 +494,8 @@ nav.viewTours ul li {
 	border: 0.05em solid #000;
 }
 #funWithTheKidsShortTour {
-	background: linear-gradient(to top,rgba(255,255,255, 1),rgba(0,0,0, 0)), url(images/The-Always-Have-Fun-With-The-Kids-Tour-Short_sm.jpg);
+	background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0)),
+		url(images/The-Always-Have-Fun-With-The-Kids-Tour-Short_sm.jpg);
 	background-position: left;
 	background-size: cover;
 	width: 100%;
@@ -531,7 +505,8 @@ nav.viewTours ul li {
 	border: 0.05em solid #000;
 }
 #funWithTheKidsLongTour {
-	background: linear-gradient(to top,rgba(255,255,255, 1),rgba(0,0,0, 0)), url(images/The-Always-Have-Fun-With-The-Kids-Tour_sm.jpg);
+	background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(0, 0, 0, 0)),
+		url(images/The-Always-Have-Fun-With-The-Kids-Tour_sm.jpg);
 	background-position: left;
 	background-size: cover;
 	width: 100%;
@@ -540,8 +515,6 @@ nav.viewTours ul li {
 	padding-top: 11em;
 	border: 0.05em solid #000;
 }
-
-
 
 /*---------------------------
     Footer Styles 
@@ -552,7 +525,7 @@ nav.viewTours ul li {
 footer {
 	background-color: #ff7800;
 	overflow: hidden;
-	padding: .5em 0;
+	padding: 0.5em 0;
 	margin-top: 15em;
 }
 
@@ -561,7 +534,6 @@ footer nav ul {
 }
 
 #backToTopLink {
-	font-family: "ComfortaaBold", helvetica, verdana, sans-serif;
 	font-size: 1.5em;
 	margin-bottom: 5em;
 	padding: 1.5em;
@@ -573,7 +545,6 @@ footer nav ul {
 
 .copyright {
 	max-width: 70%;
-	font-size: 1em;
 	line-height: 1.6em;
 	padding: 1em 2em 1em 1em;
 }
@@ -594,338 +565,174 @@ footer nav ul {
 	padding: 2em 1.5em 5em 1.5em;
 }
 
-
-
-
-
 /*---------------------------
     @Media Styles 
 ---------------------------*/
 
-/* Small Smartphone - Styles */
 
-@media screen and (min-width: 400px) and (max-width: 500px) {
-	
-	
-#hamburgerMenu {
-	display: none;
-	position: relative;
+@media screen and (min-width: 400px) {
+
+@media screen and (min-width: 680px) {
+
+	.topTextPresentation {
+		width: 60%;
+		margin-left: 2em;
+		text-align: left;
+	}
+
+	.ourToursImageGrid {
+		max-width: 90%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1em 1em;
+	}
+
+	.footerFlexContainer {
+		text-align: center;
+		padding: 2em 1.5em 5em 1.5em;
+	}
 }
-#hamburgerMenu:checked ~ nav.topMenu {
-	position: absolute;
-	float:left;
-	display: block;
-	background-color: #ff7800;
-	width: 14em;
-}
-
-nav.topMenu {
-	display: none;
-}
-	
-.footerFlexContainer {
-	text-align: center;
-	padding: 2em 1.5em 5em 1.5em;
-}
-	
-}
-
-
-
-
-
-
-
-@media screen and (min-width: 501px) and (max-width: 749px) {
-	
-#hamburgerMenu {
-	display: none;
-	position: relative;
-}
-#hamburgerMenu:checked ~ nav.topMenu {
-	position: absolute;
-	float:left;
-	display: block;
-	background-color: #ff7800;
-	width: 14em;
-}
-
-nav.topMenu {
-	display: none;
-}
-	
-.topTextPresentation {
-	font-size: 0.8em;
-	width: 60%;
-	margin-left: 2em;
-	text-align: left;
-}
-
-.topLogoSmall {
-	width: 40%;
-	margin-left: 2em;
-}
-
-.ourToursImageGrid {
-	max-width: 90%;
-	display: grid; 
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 1em 1em;
-	
-}	
-
-#backToTopLink {
-	font-family: "ComfortaaBold", helvetica, verdana, sans-serif;
-	font-size: 1.5em;
-	margin-bottom: 5em;
-	padding: 1.5em;
-	text-align: center;
-}
-	
-	
-.footerFlexContainer {
-	text-align: center;
-	padding: 2em 1.5em 5em 1.5em;
-}
-    
-}
-
-
 
 /* Tablets - mobile landscape - Styles */
 
-@media screen and (min-width: 750px) and (max-width: 999px) {
-	
-#hamburgerMenu {
-	display: none;
-	position: relative;
-}
-#hamburgerMenu:checked ~ nav.topMenu {
-	position: absolute;
-	float:left;
-	display: block;
-	background-color: #ff7800;
-	width: 14em;
-}
+@media screen and (min-width: 800px){
+	#hamburgerMenu {
+		display: none;
 
-nav.topMenu {
-	display: none;
-}
-	
-.topTextPresentation {
-	font-size: 0.8em;
-	width: 60%;
-	margin-left: 3em;
-	text-align: center;
-}
-	
-.topLogoSmall {
-	width: 40%;
-	margin-left: 2em;
-}
-	
+	.topTextPresentation {
+		width: 60%;
+		margin-left: 3em;
+		text-align: center;
+	}
 
-	
-	
-.ourToursImageGrid {
-	max-width: 90%;
-	display: grid; 
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 1em 1em;
-}	
-	
-#backToTopLink {
-	font-family: "ComfortaaBold", helvetica, verdana, sans-serif;
-	font-size: 1.5em;
-	margin-bottom: 5em;
-	padding: 1.5em;
-	text-align: center;
-}	
-	
-  .footerFlexContainer {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-evenly;
-	padding: 2em 1.5em 5em 1.5em;
-}
+	.ourToursImageGrid {
+		max-width: 90%;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 1em 1em;
+	}
+
+	.footerFlexContainer {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-evenly;
+		padding: 2em 1.5em 5em 1.5em;
+	}
 }
 
 /* Laptop - tablet landscape - Styles */
 
-@media screen and (min-width: 1000px) and (max-width: 1199px) {
-	
-i.fab {
-	font-size: 55px;
-	color: #ffffff;
-	padding: 0.1em 0.1em 0 0.1em;
-}
-	
-#hamburgerMenu {
-	display: none;
-	position: relative;
-}
-.fa-bars {
-		visibility: hidden;
-}
-	
-.headerCol2 {
-	order: 1;
-	padding: 0;
-	justify-content: flex-start;
-	}
-	
+@media screen and (min-width: 1000px){
 
-.headerCol1 {
+
+	.headerCol2 {
+		order: 1;
+		padding: 0;
+		justify-content: flex-start;
+	}
+
+	.headerCol1 {
 		max-width: 100%;
 		order: 2;
 		display: inline-block;
 		margin: 0;
 		padding: 0;
 	}
-	
-.headerFlexContainer {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-start;
+
+	.headerFlexContainer {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
 	}
 
-nav.topMenu li{
+	nav.topMenu li {
 		text-align: left;
 		display: inline-block;
 		max-width: 100%;
 		margin: 0 1em;
 		padding: 0;
 	}
-	
-.headerCol3 {
+
+	.headerCol3 {
 		display: none;
 		max-width: 0;
-	    max-height: 0;
+		max-height: 0;
 	}
-.topTextPresentation {
-	font-size: 1em;
-	width: 60%;
-	text-align: center;
+	.topTextPresentation {
+		width: 60%;
+		text-align: center;
+	}
+
+	.ourToursImageGrid {
+		max-width: 90%;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 1em 1em;
+	}
+
+	.footerFlexContainer {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-evenly;
+		padding: 2em 1.5em 5em 1.5em;
+	}
 }
 
-.topLogoSmall {
-	width: 40%;
-	margin-left: 2em;
-}
-	
-	
-
-	
-.ourToursImageGrid {
-	max-width: 90%;
-	display: grid; 
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-gap: 1em 1em;
-}	
-	
-#backToTopLink {
-	font-family: "ComfortaaBold", helvetica, verdana, sans-serif;
-	font-size: 1.5em;
-	margin-bottom: 5em;
-	padding: 1.5em;
-	text-align: center;
-}
-	
-  .footerFlexContainer {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-evenly;
-	padding: 2em 1.5em 5em 1.5em;
-} 
-}
-  
 /* Laptop - Desktop - Styles */
 
 @media screen and (min-width: 1200px) {
-	
-i.fab {
-	font-size: 55px;
-	color: #ffffff;
-	padding: 0.1em 0.1em 0 0.1em;
-}
 
-#hamburgerMenu {
-	display: none;
-	position: relative;
-}
-.fa-bars {
-		visibility: hidden;
-}
-	
-.headerCol2 {
-	float:left;
-	order: 1;
-	padding-left: 1.5em;
-	justify-content: flex-start;
+	.headerCol2 {
+		float: left;
+		order: 1;
+		padding-left: 1.5em;
+		justify-content: flex-start;
 	}
 
-.headerCol1 {
+	.headerCol1 {
 		max-width: 100%;
 		order: 2;
 		display: inline-block;
 		margin: 0;
 		padding: 0;
 	}
-	
-.headerFlexContainer {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-start;
+
+	.headerFlexContainer {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
 	}
 
-nav.topMenu li{
+	nav.topMenu li {
 		text-align: left;
 		display: inline-block;
 		max-width: 100%;
 		margin: 0;
 		padding: 0;
 	}
-	
-.headerCol3 {
+
+	.headerCol3 {
 		display: none;
 		max-width: 0;
-	    max-height: 0;
+		max-height: 0;
 	}
-.topTextPresentation {
-	font-size: 1em;
-	width: 60%;
-	margin-left: 5em;
-	text-align: center;
-}
-	
-.topLogoSmall {
-	width: 40%;
-	margin-left: 2em;
-}
-	
-	
-	
-.ourToursImageGrid {
-	max-width: 90%;
-	display: grid; 
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-gap: 1em 1em;
-}		
-	
-#backToTopLink {
-	font-family: "ComfortaaBold", helvetica, verdana, sans-serif;
-	font-size: 1.5em;
-	margin-bottom: 5em;
-	padding: 1.5em;
-	text-align: center;
-}
+	.topTextPresentation {
+		width: 60%;
+		margin-left: 5em;
+		text-align: center;
+	}
 
+	.ourToursImageGrid {
+		max-width: 90%;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 1em 1em;
+	}
 
-.footerFlexContainer {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-evenly;
-	padding: 2em 1.5em 5em 1.5em;
+	.footerFlexContainer {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-evenly;
+		padding: 2em 1.5em 5em 1.5em;
+	}
 }
-}    
-    
