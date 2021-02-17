@@ -18,77 +18,63 @@
     </head>
     <body>
         <header>
-			<div class="headerFlexContainer">
-				<div class="first-level-container">
-					<div class="logo-container">
+				<div class="logo-hamburger-container">
+					<div class="logo-wrap">
 						<a href="index.html">
 							<span>
-								<img src="images/Recycle_logo.svg" alt="recycle logo">
+								<img class="logo-img" src="images/Recycle_logo.svg" alt="recycle logo">
 							</span>
 						</a>
 					</div>
-					<div class="first-level-menu-container">
-						<div class="hamburger-menu">
-							<input type="checkbox" id="hamburger-menu-toggle-icon">
-							<label for="open-hamburger-menu">
-								<i aria-hidden="true" class="fas fa-bars"></i>
-							</label>
-							<div class="sidebar-menu">
+					<div class="menu-wrap">
+						<div id="headerMenu">
+							<a href="#hamburgerMenu" id="mainMenuToggle" class="menuToggle" aria-label="Open main menu">
+								<span class="sr-only">Open main menu</span>
+								<span class="fas fa-bars" aria-hidden="true"></span>
+							</a>
+							<nav id="hamburgerMenu" class="hamburgerMenu" aria-label="Hamburger menu">
+								<a href="#mainMenuToggle" id="mainMenuClose" class="mainMenuClose" aria-label="Close" main="" menu="">
+									<span class="sr-only">Close main menu</span>
+									<span class="fas fa-times" aria-hidden="true"></span>
+								</a>
 								<ul>
-									<li><a class="current-page" href="index.html">Home</a></li>						<li><a class="navAboutUs" href="about-us.html">About Us</a></li>
+									<li><a class="current-page" href="index.html">Home</a></li>
 									<li><a href="#ourTours">Our Tours</a></li>
 									<li><a href="#bookATour">Book A Tour</a></li>
-									<li><a href="#faqS">FAQs</a></li>
+									<li><a href="#faqs">FAQs</a></li>
 									<li><a href="about-us.html">About</a></li>
-									<li><a href="contact">Contact</a>
-										<ul>
-											<li><a href="mailto:contact@re-cycle.com">Email us</a></li>
-											<li><a href="#">Call us</a></li>
-											<li><a href="#">Chat with us</a></li>
-										</ul>
-									</li>
+									<li><a href="contact">Contact</a></li>
 									<li>
 										<input type="search" id="navSearch" placeholder="Search the site">
 									</li>
 								</ul>
-							</div>
+							</nav>
+							<a href="#mainMenuToggle" class="backdrop" tabindex="-1" aria-hidden="true" hidden=""></a>
 						</div>
-						<div class="horisontal-top-menu">
-							<ul>
-								<li><a href="#faqS">FAQs</a></li>
-								<li><a href="about-us.html">About</a></li>
-								<li><a href="contact">Contact</a>
-									<ul>
-										<li><a href="mailto:contact@re-cycle.com">Email us</a></li>
-										<li><a href="#">Call us</a></li>
-										<li><a href="#">Chat with us</a></li>
-									</ul>
-								</li>
-							</ul>
-
 					</div>
-				
+					<div class="horisontal-top-menu">
+							<ul>
+								<li><a href="#faqs">FAQs</a></li>
+								<li><a href="about-us.html">About</a></li>
+								<li><a href="contact">Contact</a></li>
+							</ul>
+					</div>
 				</div>
-				<nav class="horisontal-menu">
-					<ul>
-						<li><a class="current-page" href="index.html">Home</a></li>						<li><a class="navAboutUs" href="about-us.html">About Us</a></li>
-						<li><a href="#ourTours">Our Tours</a></li>
-						<li><a href="#bookATour">Book A Tour</a></li>
-						<li>
-							<input type="search" id="navSearch" placeholder="Search the site">
-						</li>
-					</ul>
-				</nav>
+			</div>
+			<nav class="horisontal-main-nav">
+				<ul>
+					<li><a class="current-page" href="index.html">Home</a></li>
+					<li><a href="#ourTours">Our Tours</a></li>
+					<li><a href="#bookATour">Book A Tour</a></li>
+					<li>
+						<input type="search" id="navSearchMain" placeholder="Search the site">
+					</li>
+				</ul>
+			</nav>
 		</header>
 		<main>
-			<section class="topPresentation">
-				<a href="index.html">
-				<img id="backToTop" class="topLogoSmall" src="images/Recycle_logo_lrg.png" alt="image of re-cycle logo" size="width:400px height:300px" title="Re-cycle Logo"></a>
-				<div class="topTextPresentation">
-					 <h1>Eco-Friendly Guided Bike Tours</h1>
-				</div>
-			</section>
-			<section class="mainSectionHome"> 
+			<section class="main-section-wrap">
+				<h1>Eco-Friendly City & Scenery<br>Guided Bike Tours</h1>
 				<div class="viewToursDropDown">
 					<div class="dropDownContentWrap">
 					<label for="tours"><i aria-hidden="true" class="fas fa-sort-down" title="Dropdown Tour List"></i>View Our Tours</label>
