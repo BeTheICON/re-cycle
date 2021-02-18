@@ -74,28 +74,25 @@
 		</header>
 		<main>
 			<section class="main-section-wrap">
-				<h1>Eco-Friendly City & Scenery<br>Guided Bike Tours</h1>
-				<div class="viewToursDropDown">
-					<div class="dropDownContentWrap">
-					<label for="tours"><i aria-hidden="true" class="fas fa-sort-down" title="Dropdown Tour List"></i>View Our Tours</label>
-					</div>
-					<input type="checkbox" id="tours">
-					<nav class="viewTours">
-						<ul>
-							<li><a href="#anotherDaySunriseTour">The Always Another Day Sunrise Tour</a></li>
-							<li><a href="#beautifulSunsetTour">The Always Beautiful Sunset Tour</a></li>
-							<li><a href="#downTownTour">The Always Down Town Tour</a></li>
-							<li><a href="#oldCityTour">The Always Old City Tour</a></li>
-							<li><a href="#romanticAttractionsTour">The Always Romantic Must See Attractions Tour</a></li>
-							<li><a href="#scenicMountainTour">The Always Scenic Mountain Tour</a></li>
-							<li><a href="#roadLessTraveledTour">The Always Take The Road Less Traveled Tour</a></li>
-							<li><a href="#selfieTour">The Always Selfie Tour</a></li>
-							<li><a href="#funWithTheKidsShortTour">The Always Have Fun With The Kids - Short Tour</a></li>
-							<li><a href="#funWithTheKidsLongTour">The Always Have Fun With The Kids - Long Tour</a></li>
-						</ul>
-					</nav>
-					<div id="viewToursMap">
-						<a href="re-cycle-tour-map.html">View Map of Our Tours</a>
+				<h1>Eco-Friendly City, Scenery &amp; Guided<br>Bike Tours</h1>
+				<div class="dropdown-content-wrap">
+					<div id="dropdown-view-tours-container">
+						<button class="dropdown-button" id="view-tours-button" aria-label="open view our tours dropdown menu">Read more about our tours <span><i class="fas fa-chevron-down"></i></span></button>
+						<div id="view-tours-dropdown" class="dropdown-content">
+							<a href="#anotherDaySunriseTour">Another Day Sunrise Tour</a>
+							<a href="#beautifulSunsetTour">Beautiful Sunset Tour</a>
+							<a href="#downTownTour">Down Town Tour</a>
+							<a href="#oldCityTour">Old City Tour</a>
+							<a href="#romanticAttractionsTour">Must See Attractions Tour</a>
+							<a href="#scenicMountainTour">Scenic Mountain Tour</a>
+							<a href="#roadLessTraveledTour">Road Less Traveled Tour</a>
+							<a href="#selfieTour">Selfie Tour</a>
+							<a href="#funWithTheKidsShortTour">Fun With The Kids - Short Tour</a>
+							<a href="#funWithTheKidsLongTour">Fun With The Kids - Long Tour</a>
+						</div>
+					</div>	
+					<div id="view-tours-map-container">
+						<a href="re-cycle_tour-map.html"><button class="view-map-button" type="button" aria-label="button to view map of our tours">View Map of Our Tours <span><i class="fas fa-route"></i></span> </button></a>
 					</div>
 					<div id="bookATour">
 						<a href="#0">BOOK A TOUR</a>
@@ -104,7 +101,7 @@
 			</section>
 			<section>
 				<div id="contentWrapOurToursHeader">
-					<h2 class="headerOurTours">View Our Tours</h2>
+					<h3 class="headerOurTours">View Our Tours</h3>
 				</div>
 				<div class="ourToursImageGrid">
 					<h3 id="anotherDaySunriseTour"><a href="#">The Always Another Day Sunrise Tour</a></h3>
@@ -167,5 +164,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="/script.js"></script>
     </body>
 </html>
