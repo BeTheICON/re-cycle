@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="tour map for our bike tours, eco-friendly company offering guided bike tours in Always city">
+        <meta name="description" content="our bike tours - eco-friendly company offering guided bike tours in Always city">
         <meta name="keywords" content="bike-tour, guided bike tours, cycling, guided tour, cycling always city, cycling">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Open+Sans&display=swap" rel="stylesheet"> 
@@ -13,7 +13,7 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
 		<link href="/styles.css" rel="stylesheet" />
-		<title>Re-cycle - Tour Map of our Guided bike tours in Always city</title>
+		<title>Re-cycle - Our Tours - Guided bike tours</title>
 
     </head>
     <body>
@@ -39,9 +39,9 @@
 								</a>
 								<ul>
 									<li><a href="index.html">Home</a></li>
-									<li><a href="re-cycle_our-tours.html">Our Tours</a></li>
-									<li><a class="current-page" href="re-cycle_tour-map.html">Tour Map</a></li>
-									<li><a href="#bookATour">Booking</a></li>
+									<li><a class="current-page" href="re-cycle_our-tours.html">Our Tours</a></li>
+                                    <li><a href="re-cycle_tour-map.html">Tour Map</a></li>
+                                    <li><a href="#bookATour">Book A Tour</a></li>
 									<li><a href="#faqs">FAQs</a></li>
 									<li><a href="about-us.html">About</a></li>
 									<li><a href="contact">Contact</a></li>
@@ -65,8 +65,8 @@
 			<nav class="horisontal-main-nav">
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<li><a href="re-cycle_our-tours.html">Our Tours</a></li>
-					<li><a class="current-page" href="re-cycle_tour-map.html">Tour Maps</a></li>
+					<li><a class="current-page" href="re-cycle_our-tours.html">Our Tours</a></li>
+					<li><a href="re-cycle_tour-map.html">Tour Maps</a></li>
 					<li><a href="#bookATour">Booking</a></li>
 					<li>
 						<input type="search" id="navSearchMain" placeholder="Search the site">
@@ -74,13 +74,25 @@
 				</ul>
 			</nav>
 		</header>
-		<main id=map-of-our-tours>
-			<h1>Map of our bike tours</h1>
-			<section class="iframeContainer">
-                <iframe class="tourMap" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d127984.50717465369!2d10.780672!3d59.9195648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sno!2sno!4v1613675041745!5m2!1sno!2sno" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0">
-                </iframe>
-            </section>
-			<div id="bookATour-our-tours">
+		<main id="our-tours-page">
+			<section>
+				<div>
+					<h1 id="headerOurTours">View All Our Bike Tours</h1>
+				</div>
+				<div class="ourToursImageGrid">
+					<a href="#" id="anotherDaySunriseTour"><h3>Sunrise Tour</h3></a>
+					<a href="#" id="beautifulSunsetTour"><h3>Sunset Tour</h3></a>
+					<a href="#" id="downTownTour"><h3>Down Town Tour</h3></a>
+					<a href="#" id="oldCityTour"><h3>Old City Tour</h3></a>
+					<a href="#" id="romanticAttractionsTour"><h3>Must-See Attractions Tour</h3></a>
+					<a href="#" id="scenicMountainTour"><h3>Scenic Mountain Tour</h3></a>
+					<a href="#" id="roadLessTraveledTour"><h3>Road Less Traveled Tour</h3></a>
+					<a href="#" id="selfieTour"><h3>Selfie Tour</h3></a>
+					<a href="#" id="funWithTheKidsShortTour"><h3>Fun With The Kids<br>Short Tour</h3></a>
+					<a href="#" id="funWithTheKidsLongTour"><h3>Fun With The Kids<br>Long Tour</h3></a>
+				</div>
+			</section>
+            <div id="bookATour-our-tours">
 				<a href="#0">BOOK A TOUR <span><i class="fas fa-chevron-right" aria-label="hidden"></i></span></a>
 			</div>
 		</main>

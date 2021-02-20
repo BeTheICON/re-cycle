@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="tour map for our bike tours, eco-friendly company offering guided bike tours in Always city">
+        <meta name="description" content="booking form for our bike tours, eco-friendly company offering guided bike tours in Always city">
         <meta name="keywords" content="bike-tour, guided bike tours, cycling, guided tour, cycling always city, cycling">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Open+Sans&display=swap" rel="stylesheet"> 
@@ -13,7 +13,7 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
 		<link href="/styles.css" rel="stylesheet" />
-		<title>Re-cycle - Tour Map of our Guided bike tours in Always city</title>
+		<title>Re-cycle - Booking Form for our Guided bike tours in Always city</title>
 
     </head>
     <body>
@@ -40,8 +40,8 @@
 								<ul>
 									<li><a href="index.html">Home</a></li>
 									<li><a href="re-cycle_our-tours.html">Our Tours</a></li>
-									<li><a class="current-page" href="re-cycle_tour-map.html">Tour Map</a></li>
-									<li><a href="#bookATour">Booking</a></li>
+									<li><a href="re-cycle_tour-map.html">Tour Map</a></li>
+									<li><a class="current-page" href="re-cycle_booking.html">Booking</a></li>
 									<li><a href="#faqs">FAQs</a></li>
 									<li><a href="about-us.html">About</a></li>
 									<li><a href="contact">Contact</a></li>
@@ -57,7 +57,7 @@
 							<ul>
 								<li><a href="#faqs">FAQs</a></li>
 								<li><a href="about-us.html">About</a></li>
-								<li><a href="contact">Contact</a></li>
+								<li><a href="contact-us.html">Contact</a></li>
 							</ul>
 					</div>
 				</div>
@@ -66,23 +66,61 @@
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="re-cycle_our-tours.html">Our Tours</a></li>
-					<li><a class="current-page" href="re-cycle_tour-map.html">Tour Maps</a></li>
-					<li><a href="#bookATour">Booking</a></li>
+					<li><a href="re-cycle_tour-map.html">Tour Maps</a></li>
+					<li><a class="current-page" href="re-cycle_booking.html">Booking</a></li>
 					<li>
 						<input type="search" id="navSearchMain" placeholder="Search the site">
 					</li>
 				</ul>
 			</nav>
 		</header>
-		<main id=map-of-our-tours>
-			<h1>Map of our bike tours</h1>
-			<section class="iframeContainer">
-                <iframe class="tourMap" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d127984.50717465369!2d10.780672!3d59.9195648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sno!2sno!4v1613675041745!5m2!1sno!2sno" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0">
-                </iframe>
+		<main>
+			<h1>Book your bike-tour</h1>
+                <section class="booking-form-background">
+                    <div class="booking-form-container">
+                      <div id="successMessage"></div>
+                      <div id="validationErrorMessage"></div>
+                      <form id="booking-form">
+                          <div id="form-note-hide" class="form-note">&#42Please note&#58; All marked fields are required</div>
+                          <div>
+                              <label>
+                                <span class="form-note">&#42</span>Name <span class="note">&#40;First and last name&#41;</span>
+                                  <input name="name" id="name"/>
+                              </label>
+                              <div class="form-error" id="nameError">Please enter your first and last name</div>
+                          </div>
+                          <div>
+                            <label>
+                              <span class="form-note">&#42</span>Address <span class="note">&#40;Postal code &amp; City&#41;</span>
+                                <input name="address" id="address"/>
+                            </label>
+                            <div class="form-error" id="addressError">Please make sure you have written both your postal code &#40;4 characters&#41; and your city</div>
+                            </div>
+                          <div>
+                            <label>
+                              <span class="form-note">&#42</span>Email <span><i class="far fa-envelope" aria-label="hidden"></i></span>
+                                <input name="email" id="contact-form-email"/>
+                            </label>
+                            <div class="form-error" id="contact-form-emailError">Please make sure you have entered a valid email addresss</div>
+                          </div>
+                          <div>
+                            <label for="date"><span class="form-note">&#42</span>Booking date <span><i class="fas fa-calendar-day" aria-label="hidden"></i></span> <span class="note">&#40;When are you coming&#41;</span></label>
+                                <input id="date" name="date" type="date" required>
+                                <div class="form-error" id="dateError">Please make sure your have chosen a booking date&#46;
+                                </div>
+                          </div>
+                          <div>
+                            <label for="comment"><span class="form-note">&#42</span>If you have information you want to add, please do so in the comment field below<span><i class="far fa-comment-dots" aria-label="hidden"></i></span> <span class="note">&#40;Maximum 250 characters&#41;</span></label>
+                                <textarea id="comment" name="textareaComment" type="text" rows="5" cols="33" minLength="10" maxlength="250" placeholder="Please write your comment here..."/>
+                                </textarea>
+                                <div class="form-error" id="commentError">Please make sure your comment is between minimum 10 and maximum 250 characters&#46;
+                                </div>
+                          </div>
+                          <button id="booking-button" type="submit" aria-label="booking form button">Book tour!</button>
+                      </form>
+                    </div>
+                  </section>
             </section>
-			<div id="bookATour-our-tours">
-				<a href="#0">BOOK A TOUR <span><i class="fas fa-chevron-right" aria-label="hidden"></i></span></a>
-			</div>
 		</main>
 		<footer>
 			<div class="footerFlexContainer">

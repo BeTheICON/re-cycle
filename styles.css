@@ -116,6 +116,7 @@ button:focus {
 }
 
 .fas.fa-chevron-down,
+.fas.fa-chevron-right,
 .fas.fa-route,
 .fas.fa-arrow-alt-circle-down,
 .fas.fa-arrow-alt-circle-up {
@@ -278,13 +279,10 @@ header {
 }
 
 .fas.fa-bars,
-.fas.fa-times {
-	font-size: 2.4rem;
-}
-
+.fas.fa-times,
 .fas.fa-arrow-alt-circle-down,
 .fas.fa-arrow-alt-circle-up {
-	font-size: 1.6rem;
+	font-size: 2.5rem;
 }
 
 .fas.fa-bars,
@@ -354,38 +352,31 @@ header {
 .show-dropdown {
 	display: block;
 }
-
-.aboutP {
-	max-width: 85%;
+#aboutUs {
+	background: url(images/bsckground-image_re-cycle_about-us_planet-tree_1920x600.jpg)
+		top no-repeat;
+	width: 100%;
 	margin: 0 auto;
-	padding-top: 10em;
-	padding-bottom: 30em;
-	background-color: rgba(255, 255, 255, 0.8);
-}
-.aboutUs {
-	background: url(images/bsckground-image_re-cycle_about-us_planet-tree.png)
-		center no-repeat;
-	background-size: cover;
-	max-width: 100%;
-	min-height: 800px;
-	margin-top: 5em;
 }
 
-.contactUs {
-	background: url(images/background-img_re-cycle_logo_contact-us.png) center
-		no-repeat;
-	background-size: cover;
-	max-width: 100%;
-	min-height: 800px;
-	margin-top: 5em;
-}
-
-.contactUsInfo {
-	max-width: 90%;
+#contactUs {
+	background: url(images/background-img_re-cycle_logo_contact-us_1920x600.jpg)
+		top no-repeat;
+	width: 100%;
 	margin: 0 auto;
-	padding-top: 10em;
-	padding-bottom: 30em;
-	background-color: rgba(255, 255, 255, 0.9);
+}
+
+#contactUs h1,
+#aboutUs h1 {
+	padding-left: 2rem;
+}
+
+.contactUsInfo,
+.aboutText {
+	width: 80%;
+	max-width: 700px;
+	margin: 1rem auto 10rem;
+	background-color: rgba(255, 255, 255, 0.6);
 }
 
 .iframeContainer {
@@ -412,11 +403,17 @@ header {
 }
 
 #bookATour {
-	padding: 1.5rem 0;
-	max-width: 340px;
 	margin: -30rem auto 27rem;
 }
+
 #bookATour,
+#bookATour-our-tours {
+	padding: 1.5rem 0;
+	max-width: 340px;
+	width: 100%;
+}
+#bookATour,
+#bookATour-our-tours,
 .back-to-top-button {
 	background: rgba(97, 213, 95, 0.9);
 	border-radius: 10px;
@@ -428,29 +425,56 @@ header {
 }
 
 #bookATour:hover,
+#bookATour-our-tours:hover,
 .back-to-top-button:hover {
 	background: #fff;
 	border: 1px solid #000;
 	color: #000;
 }
 #bookATour a:hover,
+#bookATour-our-tours a:hover,
 .back-to-top-button a:hover {
 	color: #000;
 }
 #bookATour a:active,
+#bookATour-our-tours a:active,
 .back-to-top-button a:active {
 	color: rgba(97, 213, 95, 1);
 }
 #bookATour:active,
+#bookATour-our-tours:active,
 .back-to-top-button:active {
 	color: rgba(97, 213, 95, 1);
 	border: 1px solid rgba(97, 213, 95, 1);
+}
+#bookATour-our-tours {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 1rem auto;
+}
+main#our-tours-page,
+main#map-of-our-tours,
+main#homepage-content {
+	padding-bottom: 10rem;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.headerOurTours {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 #contentWrapOurToursHeader {
 	max-width: 100%;
 	text-align: center;
-	padding: 0.5rem 0;
+	width: 100%;
+	padding: 0.1rem 0;
 	background-color: #ff7800;
 	background-image: linear-gradient(90deg, #ff7800 40%, #efaa48 100%);
 	border-bottom: 6px ridge#fcfcfc;
@@ -463,7 +487,7 @@ header {
 	display: grid;
 	grid-template-columns: 1fr;
 	width: 90%;
-	margin: 0 auto;
+	margin: 3rem auto;
 	text-align: center;
 	align-items: center;
 	justify-content: center;
@@ -498,6 +522,7 @@ header {
 }
 #oldCityTour {
 	background: url(images/The-Always-Old-City-Tour_sm.jpg) no-repeat left;
+	background-size: cover;
 	position: relative;
 }
 #romanticAttractionsTour {
@@ -538,10 +563,11 @@ footer {
 	width: 100%;
 	background-color: #ff7800;
 	background-image: linear-gradient(90deg, #ff7800 40%, #efaa48 100%);
-	padding: 2rem 1rem;
+	padding: 2rem 1rem 6rem;
 	margin: 5rem auto 0;
 	text-align: left;
 	border-top: 6px ridge #fcfcfc;
+	position: relative;
 }
 
 .footerFlexContainer {
@@ -550,7 +576,7 @@ footer {
 	flex-flow: row wrap;
 	text-align: center;
 	justify-content: left;
-	margin: 0 auto;
+	margin: 0 auto 3rem;
 }
 
 .footerCol1,
@@ -582,11 +608,20 @@ footer {
 }
 
 .back-to-top-button {
-	padding: 0.5rem 1rem 1rem;
 	width: 100%;
-	min-width: 140px;
+	min-width: 160px;
 	max-width: 200px;
-	margin: 3rem auto 4rem;
+	padding: 0.5rem 0;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+#backToTopLink {
+	position: absolute;
+	right: 1rem;
+	bottom: 1rem;
 }
 
 .copyright {
@@ -760,22 +795,30 @@ footer {
 		background-image: url(/images/re-cycle_home-page_background_w1024_h361.jpg);
 	}
 
+	.footerFlexContainer {
+		justify-content: space-evenly;
+		align-items: center;
+		width: 90%;
+	}
+	.footerCol1,
+	.footerCol2,
+	.footerCol3 {
+		width: 20%;
+	}
+
 	.footerBottomLine {
 		flex-flow: row wrap;
+		align-items: center;
 		justify-content: space-between;
-		width: 90%;
+		width: 95%;
 		margin: 0 auto;
 	}
 
-	.back-to-top-button {
-		margin-left: 2rem;
-	}
-
 	.copyright {
-		width: 60%;
+		width: 55%;
 	}
 	.footerSocialMedia {
-		width: 35%;
+		width: 30%;
 		justify-content: right;
 		align-content: flex-end;
 	}
@@ -805,7 +848,7 @@ footer {
 	}
 
 	#bookATour {
-		margin: -20rem auto 16rem;
+		margin: -20rem auto 19rem;
 	}
 
 	.ourToursImageGrid {
