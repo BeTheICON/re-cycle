@@ -44,7 +44,7 @@
 									<li><a class="current-page" href="re-cycle_booking.html">Booking</a></li>
 									<li><a href="#faqs">FAQs</a></li>
 									<li><a href="about-us.html">About</a></li>
-									<li><a href="contact">Contact</a></li>
+									<li><a href="contact-us.html">Contact</a></li>
 									<li>
 										<input type="search" id="navSearch" placeholder="Search the site">
 									</li>
@@ -78,8 +78,6 @@
 			<h1>Please fill in the form below to book your bike-tour</h1>
                 <section class="booking-form-background">
                     <div class="booking-form-container">
-                      <div id="successMessage"></div>
-                      <div id="validationErrorMessage"></div>
                       <form id="booking-form">
                           <div id="form-note-hide" class="form-note">&#42Please note&#58; All marked fields are required</div>
                           <div>
@@ -101,11 +99,11 @@
                               <span class="form-note">&#42</span>Email <span><i class="far fa-envelope" aria-label="hidden"></i></span>
                                 <input name="email" id="booking-email"/>
                             </label>
-                          <div class="form-error" id="booking-emailError">Please make sure you have entered a valid email addresss</div>
+                          <div class="form-error" id="booking-emailError">Please make sure you have entered a valid email address</div>
                           </div>
                           <div>
                             <label for="date"><span class="form-note">&#42</span>Booking date <span><i class="fas fa-calendar-day" aria-label="hidden"></i></span> <span class="note">&#40;When are you coming&#41;</span>
-							    <input id="date" name="date" type="date" required/>
+							    <input id="date" name="date" type="date"/>
 							</label>
                              <div class="form-error" id="dateError">Please make sure your have chosen a booking date&#46;
                             </div>
@@ -114,8 +112,8 @@
                             <label for="tour" id="select-tour"><span class="form-note">&#42</span>Choose your tour from the dropdown<span><i class="fas fa-route" aria-label="hidden"></i></span>
 							</label>
 							<select name="tour" id="select-tour-dropdown">
-								<option class="options-dropdown" value="empty">Select a tour</option>
-								<option class="options-dropdown" value="anotherDaySunriseTour">Sunrise Tour</option>
+								<option value="select">Select a tour</option>
+								<option value="anotherDaySunriseTour">Sunrise Tour</option>
 								<option value="beautifulSunsetTour">Sunset Tour</option>
 								<option value="downTownTour">Down Town Tour</option>
 								<option value="oldCityTour">Old City Tour</option>
@@ -147,11 +145,12 @@
                             <div class="form-error" id="commentError">Please make sure your comment is maximum 250 characters&#46;
                             </div>
                         </div>
+						<div id="validationErrorMessage"></div>
                         <button id="booking-button" type="submit" aria-label="booking form button">Book tour!</button>
                       </form>
+					  <div id="successMessage"></div>
                     </div>
-                  </section>
-            </section>
+			</section>
 		</main>
 		<footer>
 			<div class="footerFlexContainer">

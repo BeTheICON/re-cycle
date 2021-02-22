@@ -4,7 +4,7 @@ const address = document.querySelector("#address");
 const addressError = document.querySelector("#addressError");
 const bookingEmail = document.querySelector("#booking-email");
 const bookingEmailError = document.querySelector("#booking-emailError");
-const date = document.querySelector("#date");
+const bookingDate = document.querySelector("#date");
 const dateError = document.querySelector("#dateError");
 const selectTourDropdown = document.querySelector("#select-tour-dropdown");
 const selectTourDropdownError = document.querySelector("#selectTourError");
@@ -29,36 +29,31 @@ function validateBookingForm(e) {
         nameError.style.display = "block";
     }
     if (checkLength(address.value,9)===true){
-        subjectError.style.display = "none";
+        addressError.style.display = "none";
     }else{
-        subjectError.style.display = "block";
+        addressError.style.display = "block";
     }
     if(validateBookingFormEmail(bookingEmail.value)===true) {
             bookingEmailError.style.display = "none";
-        }else{
+    }else{
             bookingEmailError.style.display = "block";
-        }
-     if(date.selected === true){
-            selectTourDropdownError.style.display = "none";
-     }else {
-            selectTourDropdownError.style.display = "block";
-        }
-    
+    }
+    if(validateBookingDate(bookingDate.value)===true) {
+        dateError.style.display = "none";
+    }else{
+        dateError.style.display = "block";
+    }
     if((guide.checked === true) || (noGuide.checked === true)){
         guideError.style.display = "none";
     }else if((guide.checked ===false) && (noGuide.checked === false)) {
         guideError.style.display = "block";
     }
-    if(selectTourDropdown.selected === true){
+    if((selectTourDropdown.value==="select") === false){
         selectTourDropdownError.style.display = "none";
     }else {
         selectTourDropdownError.style.display = "block";
     }
-
-
-
-
-    if(checkLength(comment.value,250)===false){
+     if(checkLength(comment.value,250)===false){
         commentError.style.display = "none";
     }else{
         commentError.style.display = "block";
@@ -73,13 +68,13 @@ bookingForm.addEventListener("submit", validateBookingForm);
 
 
 function checkIfValidationIsTrue() {
-    if((checkLength(bookingName.value,4)) && (checkLength(address.value,5)) && (validateBookingFormEmail(bookingEmail.value)) && (!checkLength(comment.value,450)))){
+    if((checkLength(bookingName.value,4)) && (checkLength(address.value,9)) && (validateBookingFormEmail(bookingEmail.value)) && (validateBookingDate(bookingDate.value)) && ((guide.checked === true) || (noGuide.checked === true)) && (checkLength(comment.value,250)===false)){
         formNoteHide.style.display = "none";
-        successMessage.innerHTML = `<div class="successMessage">Success&#33; <br>The contact form has been sent&#44; and we&#39;ll get back to you shortly&#46;</div>`;
+        successMessage.innerHTML = `<div class="successMessage">Success&#33; <br>Your booking has been sent&#44; and we&#39;ll get back to you shortly&#46; with your booking-confirmation</div>`;
         bookingForm.reset();
     }else{
         formNoteHide.style.display = "none";
-        validationErrorMessage.innerHTML = `<div class="validationErrorMessage">We&#39;re sorry, but some of the form&#45;fields doesn&#39;t seem to be filled out correctly&#46;<br>Please check and update the marked fields before you submit the form again&#46;</div>`;
+        validationErrorMessage.innerHTML = `<div class="validationErrorMessage">We&#39;re sorry, but some of the form&#45;fields don&#39;t seem to be filled out correctly&#46;<br>Please check and update the marked fields before you submit the form again&#46;</div>`;
     }
 }
 
@@ -87,6 +82,12 @@ function validateBookingFormEmail(bookingEmail) {
     const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const patternMatches = regEx.test(bookingEmail);
     return patternMatches;
+}
+
+function validateBookingDate(bookingDate){
+    const regExDate = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
+    const patternMatchesDate = regExDate.test(bookingDate);
+    return patternMatchesDate;
 }
 
 function checkLength(value, len){
