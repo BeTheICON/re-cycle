@@ -803,6 +803,7 @@ footer {
 @media screen and (max-width: 319px) {
 	#bookATour {
 		margin: -15rem auto 14rem;
+		max-width: 200px;
 	}
 	.ourToursImageGrid a {
 		min-width: 240px;
@@ -810,6 +811,9 @@ footer {
 }
 
 @media screen and (min-width: 320px) {
+	#bookATour {
+		max-width: 200px;
+	}
 	.main-section-wrap {
 		min-height: 800px;
 		background-image: url(http://betheicon.no/re-cycle/images/re-cycle_home-page_background_w600_h800.jpg);
