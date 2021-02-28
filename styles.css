@@ -802,7 +802,7 @@ footer {
 
 @media screen and (max-width: 319px) {
 	#bookATour {
-		margin: -18rem auto 14rem;
+		margin: -15rem auto 14rem;
 	}
 	.ourToursImageGrid a {
 		min-width: 240px;
