@@ -56,7 +56,7 @@ h1 {
 	font-weight: 600;
 	font-size: 1.2rem;
 	color: #000;
-	text-shadow: 0.2rem 0.2rem 1rem rgba(121, 242, 119, 1);
+	text-shadow: 2px 2px 4px rgba(121, 242, 119, 0.8);
 	background: rgba(252, 252, 252, 0.4);
 	margin: 2rem auto 0;
 	padding: 1.5rem 0 1rem 1rem;
@@ -308,7 +308,7 @@ header {
 .main-section-wrap {
 	height: 100%;
 	min-height: 600px;
-	background-image: url(/images/re-cycle_home-page_background_w320_h600.jpg);
+	background-image: url(http://betheicon.no/re-cycle/images/re-cycle_home-page_background_w320_h600.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -360,13 +360,13 @@ header {
 	display: block;
 }
 #aboutUs {
-	background: url(images/bsckground-image_re-cycle_about-us_planet-tree_1920x600.jpg)
+	background: url(http://betheicon.no/re-cycle/images/bsckground-image_re-cycle_about-us_planet-tree_1920x600.jpg)
 		top no-repeat;
 	width: 100%;
 }
 
 #contactUs {
-	background: url(images/background-img_re-cycle_logo_contact-us_1920x600.jpg)
+	background: url(http://betheicon.no/re-cycle/images/background-img_re-cycle_logo_contact-us_1920x600.jpg)
 		top no-repeat;
 	width: 100%;
 }
@@ -528,41 +528,46 @@ main#homepage-content {
 }
 
 #anotherDaySunriseTour {
-	background: url(images/The-Always-Another-Day-Sunrise-Tour_sm.jpg) no-repeat
-		left;
+	background: url(http://betheicon.no/re-cycle/images/The-Always-Another-Day-Sunrise-Tour_sm.jpg)
+		no-repeat left;
 }
 #beautifulSunsetTour {
-	background: url(images/The-Always-Beautiful-Sunset-Tour_sm.jpg) no-repeat left;
+	background: url(http://betheicon.no/re-cycle/images/The-Always-Beautiful-Sunset-Tour_sm.jpg)
+		no-repeat left;
 }
 
 #downTownTour {
-	background: url(images/The-Always-Going-Down-Town-Tour_sm.jpg) no-repeat left;
+	background: url(http://betheicon.no/re-cycle/images/The-Always-Going-Down-Town-Tour_sm.jpg)
+		no-repeat left;
 }
 #oldCityTour {
-	background: url(images/The-Always-Old-City-Tour_sm.jpg) no-repeat left;
+	background: url(http://betheicon.no/re-cycle/images/The-Always-Old-City-Tour_sm.jpg)
+		no-repeat left;
 	background-size: cover;
 }
 #romanticAttractionsTour {
-	background: url(images/The-Always-Romantic-Must-See-Attractions-Tour_sm.jpg)
+	background: url(http://betheicon.no/re-cycle/images/The-Always-Romantic-Must-See-Attractions-Tour_sm.jpg)
 		no-repeat left;
 }
 #scenicMountainTour {
-	background: url(images/The-Always-Scenic-Mountain-Tour_sm.jpg) no-repeat left;
+	background: url(http://betheicon.no/re-cycle/images/The-Always-Scenic-Mountain-Tour_sm.jpg)
+		no-repeat left;
 }
 
 #roadLessTraveledTour {
-	background: url(images/The-Always-Take-The-Road-Less-Traveled-Tour_sm.jpg)
+	background: url(http://betheicon.no/re-cycle/images/The-Always-Take-The-Road-Less-Traveled-Tour_sm.jpg)
 		no-repeat left;
 }
 #selfieTour {
-	background: url(images/The-Always-Beautiful-Sunset-Tour_sm.jpg) no-repeat left;
+	background: url(http://betheicon.no/re-cycle/images/The-Always-Beautiful-Sunset-Tour_sm.jpg)
+		no-repeat left;
 }
 #funWithTheKidsShortTour {
-	background: url(images/The-Always-Have-Fun-With-The-Kids-Tour-Short_sm.jpg)
+	background: url(http://betheicon.no/re-cycle/images/The-Always-Have-Fun-With-The-Kids-Tour-Short_sm.jpg)
 		no-repeat left;
 }
 #funWithTheKidsLongTour {
-	background: url(images/The-Always-Have-Fun-With-The-Kids-Tour_sm.jpg)
+	background: url(http://betheicon.no/re-cycle/images/The-Always-Have-Fun-With-The-Kids-Tour_sm.jpg)
 		no-repeat left;
 }
 
@@ -807,7 +812,7 @@ footer {
 @media screen and (min-width: 320px) {
 	.main-section-wrap {
 		min-height: 800px;
-		background-image: url(/images/re-cycle_home-page_background_w600_h800.jpg);
+		background-image: url(/http://betheicon.no/re-cycle/images/re-cycle_home-page_background_w600_h800.jpg);
 	}
 }
 
@@ -899,7 +904,7 @@ footer {
 
 	.main-section-wrap {
 		min-height: 282px;
-		background-image: url(/images/re-cycle_home-page_background_w800_h282.jpg);
+		background-image: url(/http://betheicon.no/re-cycle/images/re-cycle_home-page_background_w800_h282.jpg);
 	}
 	#bookATour {
 		margin: 3rem auto;
@@ -934,7 +939,7 @@ footer {
 
 	.main-section-wrap {
 		min-height: 361px;
-		background-image: url(/images/re-cycle_home-page_background_w1024_h361.jpg);
+		background-image: url(/http://betheicon.no/re-cycle/images/re-cycle_home-page_background_w1024_h361.jpg);
 	}
 
 	.footerFlexContainer {
@@ -986,7 +991,7 @@ footer {
 
 	.main-section-wrap {
 		min-height: 677px;
-		background-image: url(/images/re-cycle_home-page_background_w1920_h677.jpg);
+		background-image: url(/http://betheicon.no/re-cycle/images/re-cycle_home-page_background_w1920_h677.jpg);
 	}
 
 	#bookATour {
