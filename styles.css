@@ -407,14 +407,14 @@ header {
 }
 
 #bookATour {
-	margin: -30rem auto 27rem;
+	margin: -15rem auto 14rem;
 }
 
 #bookATour,
 #bookATour-our-tours,
 #booking-button {
 	padding: 1.5rem 0;
-	max-width: 340px;
+	max-width: 300px;
 	width: 100%;
 }
 #bookATour,
@@ -801,8 +801,7 @@ footer {
 
 @media screen and (max-width: 319px) {
 	#bookATour {
-		margin: -15rem auto 14rem;
-		max-width: 200px;
+		max-width: 240px;
 	}
 	.ourToursImageGrid a {
 		min-width: 240px;
@@ -810,9 +809,6 @@ footer {
 }
 
 @media screen and (min-width: 320px) {
-	#bookATour {
-		max-width: 200px;
-	}
 	.main-section-wrap {
 		min-height: 800px;
 		background-image: url(http://betheicon.no/re-cycle/images/re-cycle_home-page_background_w600_h800.jpg);
@@ -998,7 +994,7 @@ footer {
 	}
 
 	#bookATour {
-		margin: -20rem auto 19rem;
+		margin: -17rem auto 16rem;
 	}
 
 	.ourToursImageGrid {
